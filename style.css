@@ -490,6 +490,25 @@ p {
   text-align: left;
 }
 
+@media (max-width: 899px) {
+  .hero-text-col {
+    text-align: center;
+  }
+
+  .hero-text-col .capsule-tag {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+  }
+
+  .hero-quick-specs {
+    justify-content: center;
+  }
+}
+
 .hero-headline {
   font-size: 2.1rem;
   line-height: 1.15;
