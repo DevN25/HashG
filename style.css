@@ -855,6 +855,25 @@ p {
   outline: none;
 }
 
+/* Mobile Video Player Overlay Play Button Scaling */
+video::-webkit-media-controls-overlay-play-button {
+  transform: scale(0.55) !important;
+}
+
+video::-webkit-media-controls-play-button {
+  transform: scale(0.65) !important;
+}
+
+@media (max-width: 768px) {
+  video::-webkit-media-controls-overlay-play-button {
+    transform: scale(0.48) !important;
+  }
+
+  video::-webkit-media-controls-play-button {
+    transform: scale(0.58) !important;
+  }
+}
+
 .mock-browser-header {
   background: var(--bg-subtle);
   padding: 6px 12px;
