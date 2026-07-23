@@ -22,11 +22,16 @@
       <stop offset="0" stop-color="#ff3708"/>
       <stop offset="1" stop-color="#f29d31"/>
     </linearGradient>
+    <clipPath id="circle-clip">
+      <circle cx="601.545" cy="601.545" r="601.545"/>
+    </clipPath>
   </defs>
-  <g>
-    <rect class="cls-2" width="1203.09" height="1203.09"/>
-    <rect class="cls-4" y="1.54" width="1200" height="1200"/>
-    <rect class="cls-1" y="1.54" width="600" height="1200"/>
+  <g clip-path="url(#circle-clip)">
+    <g>
+      <rect class="cls-2" width="1203.09" height="1203.09"/>
+      <rect class="cls-4" y="1.54" width="1200" height="1200"/>
+      <rect class="cls-1" y="1.54" width="600" height="1200"/>
+    </g>
+    <path class="cls-3" d="M601.54,797.97c161.12,0,309.21,44.25,426.64,118.18l-426.64-629.22L174.91,916.16c117.47-73.93,265.57-118.18,426.64-118.18Z"/>
   </g>
-  <path class="cls-3" d="M601.54,797.97c161.12,0,309.21,44.25,426.64,118.18l-426.64-629.22L174.91,916.16c117.47-73.93,265.57-118.18,426.64-118.18Z"/>
 </svg>
