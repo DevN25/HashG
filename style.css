@@ -318,6 +318,17 @@ p {
   gap: 12px;
 }
 
+.brand-logo-link {
+  display: inline-flex;
+  align-items: center;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.brand-logo-link:hover {
+  opacity: 0.85;
+  transform: scale(1.02);
+}
+
 .brand-svg-logo {
   height: 27px;
   width: auto;
