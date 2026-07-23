@@ -403,6 +403,30 @@ p {
   .desktop-only {
     display: none !important;
   }
+
+  .site-header .header-cta {
+    display: none !important;
+  }
+
+  .header-inner {
+    height: 64px;
+    padding: 0 16px;
+    justify-content: center;
+  }
+
+  .brand-logo-group {
+    width: 100%;
+    justify-content: center;
+    gap: 12px;
+  }
+
+  .brand-svg-logo {
+    height: 24px;
+  }
+
+  .vionetra-brand-img {
+    height: 24px;
+  }
 }
 
 /* --------------------------------------------------------------------------
