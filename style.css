@@ -986,8 +986,8 @@ p {
 
 .case-study-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 14px 36px rgba(41, 41, 152, 0.09);
-  border-color: rgba(241, 100, 43, 0.3);
+  box-shadow: 0 16px 36px rgba(255, 102, 34, 0.18), 0 4px 12px rgba(255, 102, 34, 0.08);
+  border-color: var(--brand-orange);
 }
 
 .work-header {
