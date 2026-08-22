@@ -165,12 +165,23 @@ p {
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
 }
 
+.capsule-tag.capsule-orange {
+  background-color: var(--brand-orange-soft);
+  color: var(--brand-orange);
+}
+
+.capsule-tag.capsule-blue {
+  background-color: var(--brand-blue-soft);
+  color: var(--brand-blue);
+}
+
 .dot {
   width: 8px;
   height: 8px;
   border-radius: 50%;
 }
 .dot-orange { background-color: var(--brand-orange); }
+.dot-blue { background-color: var(--brand-blue); }
 
 .section-title {
   font-size: 2rem;
@@ -922,10 +933,19 @@ p {
 }
 
 /* --------------------------------------------------------------------------
-   7. Section 4: Selected Work
+   7. Section 4: Case Studies & Business Outcomes (Warm Orange Theme)
    -------------------------------------------------------------------------- */
 .work-section {
-  background-color: #ffffff;
+  background-color: var(--brand-orange-tint);
+  border-bottom: 1px solid rgba(255, 102, 34, 0.12);
+}
+
+/* --------------------------------------------------------------------------
+   8. Section 5: AI Generative Commercials & Videos (Cool Blue Theme)
+   -------------------------------------------------------------------------- */
+.ai-videos-section {
+  background-color: var(--brand-blue-tint);
+  border-bottom: 1px solid rgba(41, 41, 152, 0.12);
 }
 
 .work-grid {
