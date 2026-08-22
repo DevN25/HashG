@@ -935,7 +935,6 @@ p {
 .cs-glass-modal .cs-challenge {
   background: linear-gradient(135deg, rgba(255, 242, 232, 0.48) 0%, rgba(255, 255, 255, 0.20) 100%);
   border: none;
-  border-left: 4px solid var(--brand-orange);
   box-shadow: 0 6px 20px rgba(241, 100, 43, 0.06);
 }
 
