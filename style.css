@@ -459,26 +459,27 @@ p {
 
 .hero-split-container {
   width: 100%;
-  max-width: 1440px;
+  max-width: 1280px;
   margin: 0 auto;
-  padding: 0 clamp(20px, 3.5vw, 48px);
+  padding: 0 clamp(20px, 3vw, 40px);
   display: grid;
   grid-template-columns: 1fr;
-  gap: clamp(24px, 3.5vw, 56px);
+  gap: clamp(24px, 3vw, 44px);
   align-items: center;
 }
 
 @media (min-width: 900px) {
   .hero-split-container {
-    grid-template-columns: 1fr 1.15fr;
+    grid-template-columns: 0.88fr 1.12fr;
+    gap: 40px;
   }
 }
 
-@media (min-width: 1600px) {
+@media (min-width: 1400px) {
   .hero-split-container {
-    max-width: 1620px;
-    grid-template-columns: 1fr 1.2fr;
-    gap: 72px;
+    max-width: 1360px;
+    grid-template-columns: 0.85fr 1.15fr;
+    gap: 48px;
   }
 }
 
@@ -499,9 +500,9 @@ p {
 
 .hero-clean-img {
   width: 100%;
-  max-width: min(580px, 44vw);
+  max-width: min(420px, 34vw);
   height: auto;
-  max-height: min(76vh, 660px);
+  max-height: min(58vh, 480px);
   object-fit: contain;
   border: none !important;
   box-shadow: none !important;
@@ -514,8 +515,8 @@ p {
 
 @media (min-width: 1600px) {
   .hero-clean-img {
-    max-width: 660px;
-    max-height: min(80vh, 760px);
+    max-width: 460px;
+    max-height: min(60vh, 520px);
   }
 }
 
@@ -544,61 +545,61 @@ p {
 }
 
 .hero-text-col .capsule-tag {
-  padding: clamp(5px, 0.7vh, 8px) clamp(14px, 1.2vw, 22px);
-  font-size: clamp(0.78rem, 0.85vw, 0.9rem);
-  margin-bottom: clamp(12px, 1.6vh, 20px);
+  padding: clamp(5px, 0.7vh, 8px) clamp(14px, 1.2vw, 20px);
+  font-size: clamp(0.76rem, 0.82vw, 0.88rem);
+  margin-bottom: clamp(10px, 1.4vh, 18px);
 }
 
 .hero-headline {
-  font-size: clamp(2rem, 3.4vw, 3.8rem);
-  line-height: 1.12;
-  margin-bottom: clamp(14px, 1.8vh, 22px);
+  font-size: clamp(2rem, 2.9vw, 3.2rem);
+  line-height: 1.15;
+  margin-bottom: clamp(12px, 1.6vh, 18px);
   letter-spacing: -0.03em;
 }
 
 @media (min-width: 1600px) {
   .hero-headline {
-    font-size: 4.2rem;
+    font-size: 3.5rem;
   }
 }
 
 .hero-subheading {
-  font-size: clamp(0.98rem, 1.15vw, 1.22rem);
+  font-size: clamp(0.95rem, 1.05vw, 1.12rem);
   color: var(--text-muted);
   line-height: 1.6;
-  margin-bottom: clamp(18px, 2.4vh, 30px);
-  max-width: 680px;
+  margin-bottom: clamp(16px, 2.2vh, 26px);
+  max-width: 620px;
 }
 
 @media (min-width: 1600px) {
   .hero-subheading {
-    max-width: 760px;
+    max-width: 680px;
   }
 }
 
 .hero-buttons {
   display: flex;
   flex-wrap: wrap;
-  gap: clamp(10px, 1.2vw, 16px);
-  margin-bottom: clamp(18px, 2.4vh, 32px);
+  gap: clamp(10px, 1.2vw, 14px);
+  margin-bottom: clamp(16px, 2.2vh, 28px);
 }
 
 .hero-buttons .btn-lg {
-  padding: clamp(9px, 1.2vh, 14px) clamp(22px, 1.8vw, 32px);
-  font-size: clamp(0.9rem, 1vw, 1.05rem);
+  padding: clamp(9px, 1.2vh, 13px) clamp(20px, 1.6vw, 28px);
+  font-size: clamp(0.88rem, 0.95vw, 1rem);
 }
 
 .hero-quick-specs {
   display: flex;
   flex-wrap: wrap;
-  gap: clamp(12px, 1.6vw, 24px);
+  gap: clamp(12px, 1.5vw, 20px);
 }
 
 .spec-pill {
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  font-size: clamp(0.82rem, 0.9vw, 0.96rem);
+  font-size: clamp(0.8rem, 0.86vw, 0.92rem);
   color: var(--text-sub);
 }
 
@@ -608,69 +609,69 @@ p {
     padding: 12px 0;
   }
   .hero-clean-img {
-    max-height: min(60vh, 460px);
-    max-width: 420px;
+    max-height: min(48vh, 360px);
+    max-width: 340px;
   }
   .hero-headline {
-    font-size: clamp(2rem, 2.8vw, 2.8rem);
-    margin-bottom: 10px;
+    font-size: clamp(1.8rem, 2.4vw, 2.5rem);
+    margin-bottom: 8px;
   }
   .hero-subheading {
-    font-size: 0.95rem;
+    font-size: 0.9rem;
     line-height: 1.45;
-    margin-bottom: 16px;
+    margin-bottom: 14px;
   }
   .hero-buttons {
-    margin-bottom: 16px;
+    margin-bottom: 14px;
   }
 }
 
 /* Reactive Height Scaling for Mobile Displays */
 @media (max-width: 899px) {
   .hero-clean-img {
-    max-width: 260px;
-    max-height: 32vh;
+    max-width: 220px;
+    max-height: 28vh;
   }
   .hero-headline {
-    font-size: 1.75rem;
-    margin-bottom: 12px;
+    font-size: 1.65rem;
+    margin-bottom: 10px;
   }
   .hero-subheading {
-    font-size: 0.88rem;
+    font-size: 0.85rem;
     line-height: 1.45;
-    margin-bottom: 16px;
+    margin-bottom: 14px;
   }
   .hero-buttons {
-    margin-bottom: 18px;
+    margin-bottom: 16px;
     gap: 8px;
   }
   .hero-buttons .btn {
-    padding: 8px 18px;
-    font-size: 0.84rem;
+    padding: 8px 16px;
+    font-size: 0.82rem;
   }
   .hero-quick-specs {
     gap: 10px;
   }
   .spec-pill {
-    font-size: 0.78rem;
+    font-size: 0.76rem;
   }
 }
 
 @media (max-height: 700px) and (max-width: 899px) {
   .hero-clean-img {
-    max-height: 25vh;
-    max-width: 200px;
+    max-height: 22vh;
+    max-width: 180px;
   }
   .hero-headline {
-    font-size: 1.45rem;
-    margin-bottom: 8px;
+    font-size: 1.4rem;
+    margin-bottom: 6px;
   }
   .hero-subheading {
-    font-size: 0.8rem;
-    margin-bottom: 12px;
+    font-size: 0.78rem;
+    margin-bottom: 10px;
   }
   .hero-buttons {
-    margin-bottom: 12px;
+    margin-bottom: 10px;
   }
 }
 
