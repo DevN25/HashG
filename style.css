@@ -434,29 +434,39 @@ p {
 }
 
 /* --------------------------------------------------------------------------
-   4. Section 1: Split Hero (Flawlessly Blended Cutout Image Left, Text Right)
+   4. Section 1: Split Hero (Reactive Full 1st Page Fit Across All Resolutions)
    -------------------------------------------------------------------------- */
 .hero-section {
-  padding: 40px 0 60px 0;
+  min-height: calc(100vh - 76px);
+  min-height: calc(100dvh - 76px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px 0;
   background-color: #ffffff;
+  box-sizing: border-box;
+  position: relative;
 }
 
-@media (min-width: 900px) {
+@media (max-width: 767px) {
   .hero-section {
-    padding: 60px 0 85px 0;
+    min-height: calc(100vh - 64px);
+    min-height: calc(100dvh - 64px);
+    padding: 20px 0;
   }
 }
 
 .hero-split-container {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 32px;
+  gap: 24px;
   align-items: center;
+  width: 100%;
 }
 
 @media (min-width: 900px) {
   .hero-split-container {
-    grid-template-columns: 0.9fr 1.1fr;
+    grid-template-columns: 0.95fr 1.05fr;
     gap: 48px;
   }
 }
@@ -466,20 +476,21 @@ p {
   width: 100%;
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 .hero-clean-image-wrapper {
   display: flex;
   justify-content: center;
-  align-items: flex-end;
+  align-items: center;
   width: 100%;
 }
 
 .hero-clean-img {
   width: 100%;
-  max-width: 420px;
+  max-width: 460px;
   height: auto;
-  max-height: 500px;
+  max-height: min(64vh, 520px);
   object-fit: contain;
   border: none !important;
   box-shadow: none !important;
@@ -521,22 +532,22 @@ p {
 
 @media (min-width: 900px) {
   .hero-headline {
-    font-size: 3rem;
+    font-size: min(3rem, 4.2vw);
   }
 }
 
 .hero-subheading {
   font-size: 1.05rem;
   color: var(--text-muted);
-  line-height: 1.6;
-  margin-bottom: 28px;
+  line-height: 1.55;
+  margin-bottom: 24px;
 }
 
 .hero-buttons {
   display: flex;
   flex-wrap: wrap;
   gap: 12px;
-  margin-bottom: 32px;
+  margin-bottom: 24px;
 }
 
 .hero-quick-specs {
@@ -551,6 +562,78 @@ p {
   gap: 6px;
   font-size: 0.85rem;
   color: var(--text-sub);
+}
+
+/* Reactive Height Scaling for Smaller / Shorter Laptop Screens */
+@media (max-height: 800px) and (min-width: 900px) {
+  .hero-section {
+    padding: 16px 0;
+  }
+  .hero-clean-img {
+    max-height: min(54vh, 420px);
+    max-width: 380px;
+  }
+  .hero-headline {
+    font-size: 2.4rem;
+    margin-bottom: 12px;
+  }
+  .hero-subheading {
+    font-size: 0.95rem;
+    line-height: 1.45;
+    margin-bottom: 18px;
+  }
+  .hero-buttons {
+    margin-bottom: 18px;
+  }
+}
+
+/* Reactive Height Scaling for Mobile Displays */
+@media (max-width: 899px) {
+  .hero-clean-img {
+    max-width: 260px;
+    max-height: 32vh;
+  }
+  .hero-headline {
+    font-size: 1.75rem;
+    margin-bottom: 12px;
+  }
+  .hero-subheading {
+    font-size: 0.88rem;
+    line-height: 1.45;
+    margin-bottom: 16px;
+  }
+  .hero-buttons {
+    margin-bottom: 18px;
+    gap: 8px;
+  }
+  .hero-buttons .btn {
+    padding: 8px 18px;
+    font-size: 0.84rem;
+  }
+  .hero-quick-specs {
+    gap: 10px;
+  }
+  .spec-pill {
+    font-size: 0.78rem;
+  }
+}
+
+@media (max-height: 700px) and (max-width: 899px) {
+  .hero-clean-img {
+    max-height: 25vh;
+    max-width: 200px;
+  }
+  .hero-headline {
+    font-size: 1.45rem;
+    margin-bottom: 8px;
+  }
+  .hero-subheading {
+    font-size: 0.8rem;
+    margin-bottom: 12px;
+  }
+  .hero-buttons {
+    margin-bottom: 12px;
+  }
 }
 
 /* --------------------------------------------------------------------------
