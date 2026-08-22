@@ -921,21 +921,29 @@ p {
   margin-bottom: 6px;
 }
 
-/* Modal Inner Section Styles - Borderless High-Translucency Glass Tiles */
+/* Modal Inner Section Styles - Tinted Transparent Glass Tiles */
 .cs-glass-modal .cs-section {
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.40) 0%, rgba(255, 255, 255, 0.18) 100%);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
   border: none;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.04);
   border-radius: 16px;
   padding: 16px 18px;
 }
 
 .cs-glass-modal .cs-challenge {
-  background: linear-gradient(135deg, rgba(255, 242, 232, 0.48) 0%, rgba(255, 255, 255, 0.20) 100%);
-  border: none;
-  box-shadow: 0 6px 20px rgba(241, 100, 43, 0.06);
+  background: rgba(241, 100, 43, 0.08);
+}
+
+.cs-glass-modal .cs-consulted {
+  background: rgba(41, 41, 152, 0.07);
+}
+
+.cs-glass-modal .cs-delivered {
+  background: rgba(16, 185, 129, 0.09);
+}
+
+.cs-glass-modal .cs-impact {
+  background: rgba(241, 100, 43, 0.08);
 }
 
 .cs-consulted .cs-label {
@@ -943,11 +951,15 @@ p {
 }
 
 .cs-delivered .cs-label {
-  color: #1f683e;
+  color: #047857;
 }
 
 .cs-impact .cs-label {
   color: var(--brand-orange);
+}
+
+.cs-delivered .cs-list li::before {
+  color: #047857;
 }
 
 /* Clean Sleek Typography Action (No Box / No Border) */
@@ -1025,9 +1037,9 @@ p {
   max-width: 960px;
   max-height: 84vh;
   overflow-y: auto;
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.48) 0%, rgba(255, 255, 255, 0.25) 100%);
-  backdrop-filter: blur(32px) saturate(220%);
-  -webkit-backdrop-filter: blur(32px) saturate(220%);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.32) 0%, rgba(255, 255, 255, 0.15) 100%);
+  backdrop-filter: blur(36px) saturate(220%);
+  -webkit-backdrop-filter: blur(36px) saturate(220%);
   border: none;
   box-shadow: 0 32px 80px -15px rgba(0, 0, 0, 0.45);
   border-radius: 22px;
