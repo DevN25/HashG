@@ -921,29 +921,29 @@ p {
   margin-bottom: 6px;
 }
 
-/* Modal Inner Section Styles - Tinted Transparent Glass Tiles */
+/* Modal Inner Section Styles - Bright Luminous Glass Tiles */
 .cs-glass-modal .cs-section {
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   border: none;
   border-radius: 16px;
   padding: 16px 18px;
 }
 
 .cs-glass-modal .cs-challenge {
-  background: rgba(241, 100, 43, 0.08);
+  background: rgba(255, 244, 238, 0.72);
 }
 
 .cs-glass-modal .cs-consulted {
-  background: rgba(41, 41, 152, 0.07);
+  background: rgba(240, 244, 255, 0.72);
 }
 
 .cs-glass-modal .cs-delivered {
-  background: rgba(16, 185, 129, 0.09);
+  background: rgba(236, 253, 245, 0.72);
 }
 
 .cs-glass-modal .cs-impact {
-  background: rgba(241, 100, 43, 0.08);
+  background: rgba(255, 248, 240, 0.72);
 }
 
 .cs-consulted .cs-label {
@@ -1006,15 +1006,15 @@ p {
 }
 
 /* ==========================================================================
-   GLASSMORPHISM POP-UP MODAL (BORDERLESS CRYSTAL TRANSLUCENCY)
+   GLASSMORPHISM POP-UP MODAL (BRIGHT LUMINOUS FROSTED GLASS)
    ========================================================================== */
 .cs-modal-backdrop {
   position: fixed;
   inset: 0;
   z-index: 9999;
-  background: rgba(10, 16, 32, 0.52);
-  backdrop-filter: blur(14px) brightness(0.9);
-  -webkit-backdrop-filter: blur(14px) brightness(0.9);
+  background: rgba(15, 23, 42, 0.25);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1037,11 +1037,11 @@ p {
   max-width: 960px;
   max-height: 84vh;
   overflow-y: auto;
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.32) 0%, rgba(255, 255, 255, 0.15) 100%);
-  backdrop-filter: blur(36px) saturate(220%);
-  -webkit-backdrop-filter: blur(36px) saturate(220%);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.72) 0%, rgba(255, 255, 255, 0.52) 100%);
+  backdrop-filter: blur(32px) saturate(190%);
+  -webkit-backdrop-filter: blur(32px) saturate(190%);
   border: none;
-  box-shadow: 0 32px 80px -15px rgba(0, 0, 0, 0.45);
+  box-shadow: 0 24px 60px -15px rgba(0, 0, 0, 0.16), 0 0 40px rgba(255, 255, 255, 0.5) inset;
   border-radius: 22px;
   padding: 24px 28px;
   transform: scale(0.94) translateY(12px);
@@ -1080,18 +1080,18 @@ p {
 
 .cs-glass-modal .engagement-badge {
   border: none;
-  background: rgba(255, 255, 255, 0.45);
+  background: rgba(255, 255, 255, 0.75);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
 }
 
 .btn-close-cs-modal {
-  background: rgba(255, 255, 255, 0.4);
+  background: rgba(255, 255, 255, 0.75);
   border: none;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
   width: 34px;
   height: 34px;
   border-radius: 50%;
