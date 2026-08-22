@@ -905,6 +905,8 @@ p {
   font-weight: 700;
   font-size: 1.15rem;
   color: var(--brand-blue);
+  line-height: 1.22;
+  letter-spacing: -0.01em;
 }
 
 .engagement-badge {
@@ -1104,6 +1106,8 @@ p {
   font-weight: 700;
   color: var(--brand-blue);
   margin: 0;
+  line-height: 1.22;
+  letter-spacing: -0.01em;
 }
 
 .cs-modal-header-right {
@@ -1288,6 +1292,21 @@ p {
 }
 
 @media (max-width: 768px) {
+  .logo-name {
+    font-size: 1.05rem;
+    line-height: 1.2;
+  }
+
+  .cs-modal-title {
+    font-size: 1.1rem;
+    line-height: 1.2;
+  }
+
+  .work-header {
+    margin-bottom: 12px;
+    gap: 6px;
+  }
+
   .cs-glass-modal {
     padding: 18px 16px;
     width: 96vw;
