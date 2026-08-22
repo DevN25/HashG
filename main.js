@@ -4,7 +4,7 @@ function initApp() {
   initScrollObserver();
   initBannerSlot();
   initVideoPlayers();
-  initCaseStudiesToggle();
+  initCaseStudyModals();
 }
 
 if (document.readyState === 'loading') {
@@ -14,29 +14,70 @@ if (document.readyState === 'loading') {
 }
 
 /**
- * Handle interactive case study details expand/collapse
+ * Handle interactive Glassmorphism Case Study Pop-up Modals
  */
-function initCaseStudiesToggle() {
-  document.querySelectorAll('.btn-toggle-case-study').forEach(btn => {
-    btn.addEventListener('click', () => {
-      const targetId = btn.getAttribute('data-target');
-      const drawer = document.getElementById(targetId);
-      const isExpanded = btn.getAttribute('aria-expanded') === 'true';
-      const labelSpan = btn.querySelector('.btn-label');
-
-      if (drawer) {
-        if (isExpanded) {
-          drawer.classList.remove('is-open');
-          btn.setAttribute('aria-expanded', 'false');
-          if (labelSpan) labelSpan.textContent = 'View Full Engagement Details';
-        } else {
-          drawer.classList.add('is-open');
-          btn.setAttribute('aria-expanded', 'true');
-          if (labelSpan) labelSpan.textContent = 'Hide Engagement Details';
-        }
+function initCaseStudyModals() {
+  // Open modal triggers
+  document.querySelectorAll('.btn-open-cs-modal, .card-open-trigger').forEach(trigger => {
+    trigger.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const targetId = trigger.getAttribute('data-modal-target');
+      const modal = document.getElementById(targetId);
+      if (modal) {
+        openModal(modal);
       }
     });
   });
+
+  // Close buttons inside modals
+  document.querySelectorAll('.btn-close-cs-modal, [data-close-modal]').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const modal = btn.closest('.cs-modal-backdrop');
+      if (modal) {
+        closeModal(modal);
+      }
+    });
+  });
+
+  // Close on clicking backdrop outside modal content
+  document.querySelectorAll('.cs-modal-backdrop').forEach(backdrop => {
+    backdrop.addEventListener('click', (e) => {
+      if (e.target === backdrop) {
+        closeModal(backdrop);
+      }
+    });
+  });
+
+  // Close on Esc key
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      const activeModal = document.querySelector('.cs-modal-backdrop.is-active');
+      if (activeModal) {
+        closeModal(activeModal);
+      }
+    }
+  });
+
+  // Handle CTA buttons inside modals that link to #contact
+  document.querySelectorAll('.cs-modal-cta').forEach(link => {
+    link.addEventListener('click', () => {
+      const modal = link.closest('.cs-modal-backdrop');
+      if (modal) {
+        closeModal(modal);
+      }
+    });
+  });
+}
+
+function openModal(modal) {
+  modal.classList.add('is-active');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeModal(modal) {
+  modal.classList.remove('is-active');
+  document.body.style.overflow = '';
 }
 
 /**

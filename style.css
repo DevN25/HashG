@@ -812,15 +812,19 @@ p {
   border: 1px solid var(--border-light);
   border-radius: 16px;
   padding: 24px;
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.28s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.28s ease;
   box-shadow: 0 4px 18px rgba(0, 0, 0, 0.04);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  position: relative;
+  background: #ffffff;
 }
 
 .case-study-card:hover {
-  box-shadow: 0 10px 28px rgba(41, 41, 152, 0.08);
+  transform: translateY(-4px);
+  box-shadow: 0 14px 36px rgba(41, 41, 152, 0.09);
+  border-color: rgba(241, 100, 43, 0.3);
 }
 
 .work-header {
@@ -934,68 +938,178 @@ p {
   color: var(--brand-orange);
 }
 
-/* Expandable Drawer */
-.case-study-details-drawer {
-  display: grid;
-  grid-template-rows: 0fr;
-  transition: grid-template-rows 0.35s ease-out, opacity 0.3s ease-out;
-  opacity: 0;
-}
-
-.case-study-details-drawer.is-open {
-  grid-template-rows: 1fr;
-  opacity: 1;
-}
-
-.case-study-details-inner {
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
-  padding-top: 14px;
-  border-top: 1px dashed var(--border-light);
-  margin-top: 6px;
-}
-
-/* Toggle Details Button */
-.btn-toggle-case-study {
+/* Glassmorphism Hover Card Trigger Button */
+.btn-open-cs-modal {
   display: inline-flex;
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  padding: 10px 16px;
-  border-radius: 8px;
-  background: #f8f9fc;
-  border: 1px solid var(--border-light);
+  padding: 11px 18px;
+  border-radius: 10px;
+  background: rgba(41, 41, 152, 0.04);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(41, 41, 152, 0.12);
   color: var(--brand-blue);
   font-family: inherit;
-  font-size: 0.86rem;
+  font-size: 0.88rem;
   font-weight: 600;
   cursor: pointer;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  margin-top: 14px;
+}
+
+.case-study-card:hover .btn-open-cs-modal,
+.btn-open-cs-modal:hover {
+  background: linear-gradient(135deg, rgba(241, 100, 43, 0.96), rgba(225, 80, 20, 0.96));
+  color: #ffffff;
+  border-color: rgba(241, 100, 43, 0.5);
+  box-shadow: 0 6px 20px rgba(241, 100, 43, 0.3);
+  transform: translateY(-2px);
+}
+
+.btn-open-cs-modal .modal-arrow {
+  transition: transform 0.25s ease;
+}
+
+.case-study-card:hover .btn-open-cs-modal .modal-arrow,
+.btn-open-cs-modal:hover .modal-arrow {
+  transform: translateX(4px);
+}
+
+/* ==========================================================================
+   GLASSMORPHISM POP-UP MODAL
+   ========================================================================== */
+.cs-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: rgba(15, 23, 42, 0.55);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.3s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.3s ease;
+}
+
+.cs-modal-backdrop.is-active {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.cs-glass-modal {
+  position: relative;
+  width: 100%;
+  max-width: 680px;
+  max-height: 88vh;
+  overflow-y: auto;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(28px) saturate(180%);
+  -webkit-backdrop-filter: blur(28px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.85);
+  box-shadow: 0 30px 70px -15px rgba(15, 23, 42, 0.35), 0 0 0 1px rgba(255, 255, 255, 0.6) inset;
+  border-radius: 20px;
+  padding: 30px;
+  transform: scale(0.92) translateY(16px);
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.cs-modal-backdrop.is-active .cs-glass-modal {
+  transform: scale(1) translateY(0);
+}
+
+.cs-modal-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  border-bottom: 1px solid rgba(41, 41, 152, 0.08);
+  padding-bottom: 16px;
+}
+
+.cs-modal-title-wrap {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.cs-modal-title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--brand-blue);
+  margin: 0;
+}
+
+.btn-close-cs-modal {
+  background: rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: var(--text-muted);
   transition: all 0.2s ease;
-  margin-top: 12px;
+  flex-shrink: 0;
 }
 
-.btn-toggle-case-study:hover {
-  background: #ffffff;
+.btn-close-cs-modal:hover {
+  background: rgba(241, 100, 43, 0.12);
+  color: var(--brand-orange);
   border-color: var(--brand-orange);
-  color: var(--brand-orange);
-  box-shadow: 0 2px 8px rgba(241, 100, 43, 0.1);
+  transform: rotate(90deg);
 }
 
-.btn-toggle-case-study .toggle-arrow {
-  transition: transform 0.3s ease;
-  color: var(--brand-orange);
+.cs-modal-body {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
 }
 
-.btn-toggle-case-study[aria-expanded="true"] .toggle-arrow {
-  transform: rotate(180deg);
+.cs-modal-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 14px;
+  border-top: 1px solid rgba(41, 41, 152, 0.08);
+  gap: 12px;
+  flex-wrap: wrap;
 }
 
-.btn-toggle-case-study[aria-expanded="true"] {
-  background: #fff8f5;
-  border-color: rgba(241, 100, 43, 0.3);
-  color: var(--brand-orange);
+.cs-modal-footer-note {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.cs-modal-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 18px;
+  border-radius: var(--radius-pill);
+  background: var(--brand-orange);
+  color: #ffffff;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.cs-modal-cta:hover {
+  background: var(--brand-orange-hover);
+  transform: translateY(-1px);
 }
 
 .cs-sub-block {
