@@ -601,6 +601,23 @@ p {
   gap: 6px;
   font-size: clamp(0.8rem, 0.86vw, 0.92rem);
   color: var(--text-sub);
+  font-weight: 500;
+}
+
+.spec-pill.spec-blue {
+  color: var(--brand-blue);
+}
+
+.spec-pill.spec-blue svg {
+  stroke: var(--brand-blue);
+}
+
+.spec-pill.spec-orange {
+  color: var(--brand-orange);
+}
+
+.spec-pill.spec-orange svg {
+  stroke: var(--brand-orange);
 }
 
 /* Reactive Height Scaling for Smaller / Shorter Laptop Screens */
