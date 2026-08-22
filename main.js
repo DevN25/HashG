@@ -17,11 +17,19 @@ if (document.readyState === 'loading') {
  * Handle interactive Glassmorphism Case Study Pop-up Modals
  */
 function initCaseStudyModals() {
-  // Open modal triggers
-  document.querySelectorAll('.btn-open-cs-modal, .card-open-trigger').forEach(trigger => {
+  // Open modal triggers (full card or button)
+  document.querySelectorAll('.case-study-card, .btn-open-cs-modal, .card-open-trigger').forEach(trigger => {
     trigger.addEventListener('click', (e) => {
+      // Don't intercept when user explicitly clicks an external link (e.g. browser url link)
+      if (e.target.closest('a.browser-url')) {
+        return;
+      }
       e.stopPropagation();
-      const targetId = trigger.getAttribute('data-modal-target');
+      let targetId = trigger.getAttribute('data-modal-target');
+      if (!targetId && trigger.classList.contains('case-study-card')) {
+        const btn = trigger.querySelector('.btn-open-cs-modal');
+        if (btn) targetId = btn.getAttribute('data-modal-target');
+      }
       const modal = document.getElementById(targetId);
       if (modal) {
         openModal(modal);

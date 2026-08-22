@@ -859,6 +859,7 @@ p {
   justify-content: space-between;
   position: relative;
   background: #ffffff;
+  cursor: pointer;
 }
 
 .case-study-card:hover {
