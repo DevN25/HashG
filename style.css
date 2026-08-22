@@ -921,22 +921,22 @@ p {
   margin-bottom: 6px;
 }
 
-/* Modal Inner Section Styles - High-Translucency Frosted Glass Tiles */
+/* Modal Inner Section Styles - Borderless High-Translucency Glass Tiles */
 .cs-glass-modal .cs-section {
   background: linear-gradient(135deg, rgba(255, 255, 255, 0.40) 0%, rgba(255, 255, 255, 0.18) 100%);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(255, 255, 255, 0.55);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04), inset 0 1px 0 rgba(255, 255, 255, 0.8);
+  border: none;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.04);
   border-radius: 16px;
   padding: 16px 18px;
 }
 
 .cs-glass-modal .cs-challenge {
   background: linear-gradient(135deg, rgba(255, 242, 232, 0.48) 0%, rgba(255, 255, 255, 0.20) 100%);
-  border: 1px solid rgba(241, 100, 43, 0.28);
+  border: none;
   border-left: 4px solid var(--brand-orange);
-  box-shadow: 0 8px 24px rgba(241, 100, 43, 0.06), inset 0 1px 0 rgba(255, 255, 255, 0.8);
+  box-shadow: 0 6px 20px rgba(241, 100, 43, 0.06);
 }
 
 .cs-consulted .cs-label {
@@ -995,7 +995,7 @@ p {
 }
 
 /* ==========================================================================
-   GLASSMORPHISM POP-UP MODAL (DEEP CRYSTAL TRANSLUCENCY)
+   GLASSMORPHISM POP-UP MODAL (BORDERLESS CRYSTAL TRANSLUCENCY)
    ========================================================================== */
 .cs-modal-backdrop {
   position: fixed;
@@ -1029,10 +1029,10 @@ p {
   background: linear-gradient(135deg, rgba(255, 255, 255, 0.48) 0%, rgba(255, 255, 255, 0.25) 100%);
   backdrop-filter: blur(32px) saturate(220%);
   -webkit-backdrop-filter: blur(32px) saturate(220%);
-  border: 1px solid rgba(255, 255, 255, 0.65);
-  box-shadow: 0 32px 80px -15px rgba(0, 0, 0, 0.4), inset 0 1px 1px 0 rgba(255, 255, 255, 0.85), inset 0 -1px 2px 0 rgba(255, 255, 255, 0.2);
+  border: none;
+  box-shadow: 0 32px 80px -15px rgba(0, 0, 0, 0.45);
   border-radius: 22px;
-  padding: 22px 28px;
+  padding: 24px 28px;
   transform: scale(0.94) translateY(12px);
   transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
   display: flex;
@@ -1049,8 +1049,8 @@ p {
   align-items: center;
   justify-content: space-between;
   gap: 16px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.4);
-  padding-bottom: 12px;
+  border-bottom: none;
+  padding-bottom: 8px;
 }
 
 .cs-modal-title-wrap {
@@ -1067,9 +1067,17 @@ p {
   margin: 0;
 }
 
+.cs-glass-modal .engagement-badge {
+  border: none;
+  background: rgba(255, 255, 255, 0.45);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
 .btn-close-cs-modal {
   background: rgba(255, 255, 255, 0.4);
-  border: 1px solid rgba(255, 255, 255, 0.65);
+  border: none;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
@@ -1088,7 +1096,6 @@ p {
 .btn-close-cs-modal:hover {
   background: rgba(241, 100, 43, 0.2);
   color: var(--brand-orange);
-  border-color: var(--brand-orange);
   transform: rotate(90deg);
 }
 
@@ -1126,8 +1133,8 @@ p {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-top: 12px;
-  border-top: 1px solid rgba(255, 255, 255, 0.4);
+  padding-top: 8px;
+  border-top: none;
   gap: 12px;
   flex-wrap: wrap;
 }
