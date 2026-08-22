@@ -4,12 +4,39 @@ function initApp() {
   initScrollObserver();
   initBannerSlot();
   initVideoPlayers();
+  initCaseStudiesToggle();
 }
 
 if (document.readyState === 'loading') {
   document.addEventListener('DOMContentLoaded', initApp);
 } else {
   initApp();
+}
+
+/**
+ * Handle interactive case study details expand/collapse
+ */
+function initCaseStudiesToggle() {
+  document.querySelectorAll('.btn-toggle-case-study').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const targetId = btn.getAttribute('data-target');
+      const drawer = document.getElementById(targetId);
+      const isExpanded = btn.getAttribute('aria-expanded') === 'true';
+      const labelSpan = btn.querySelector('.btn-label');
+
+      if (drawer) {
+        if (isExpanded) {
+          drawer.classList.remove('is-open');
+          btn.setAttribute('aria-expanded', 'false');
+          if (labelSpan) labelSpan.textContent = 'View Full Engagement Details';
+        } else {
+          drawer.classList.add('is-open');
+          btn.setAttribute('aria-expanded', 'true');
+          if (labelSpan) labelSpan.textContent = 'Hide Engagement Details';
+        }
+      }
+    });
+  });
 }
 
 /**
