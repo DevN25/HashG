@@ -941,11 +941,10 @@ p {
 }
 
 /* --------------------------------------------------------------------------
-   8. Section 5: AI Generative Commercials & Videos (Cool Blue Theme)
+   8. Section 5: AI Generative Commercials & Videos (Clean White Theme)
    -------------------------------------------------------------------------- */
 .ai-videos-section {
-  background-color: var(--brand-blue-tint);
-  border-bottom: 1px solid rgba(41, 41, 152, 0.12);
+  background-color: #ffffff;
 }
 
 .work-grid {
@@ -1707,10 +1706,11 @@ a.browser-url:hover {
 }
 
 /* --------------------------------------------------------------------------
-   8. Section 5: Why Work With Us
+   8. Section 5: Why Work With Us (Cool Blue Theme)
    -------------------------------------------------------------------------- */
 .why-section {
-  background-color: #ffffff;
+  background-color: var(--brand-blue-tint);
+  border-bottom: 1px solid rgba(41, 41, 152, 0.12);
 }
 
 .outcomes-grid {
