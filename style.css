@@ -887,34 +887,29 @@ p {
 .cs-preview-block {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 14px;
 }
 
-.cs-section {
-  background: #fdfdfd;
-  border: 1px solid var(--border-light);
-  border-radius: 10px;
-  padding: 14px 16px;
-}
-
-.cs-challenge {
-  background: #fff9f6;
-  border-color: rgba(241, 100, 43, 0.2);
-  border-left: 3px solid var(--brand-orange);
+.cs-preview-block .cs-section,
+.cs-preview-block .cs-challenge {
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  padding: 0;
 }
 
 .cs-challenge p {
-  font-size: 0.9rem;
+  font-size: 0.92rem;
   color: var(--text-dark);
-  line-height: 1.5;
+  line-height: 1.55;
   margin: 0;
 }
 
 .cs-highlights-preview {
-  background: #fbfbfe;
-  border: 1px solid rgba(41, 41, 152, 0.08);
-  border-radius: 10px;
-  padding: 12px 16px;
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  padding: 0;
 }
 
 .cs-label {
@@ -924,6 +919,20 @@ p {
   text-transform: uppercase;
   color: var(--brand-orange);
   margin-bottom: 6px;
+}
+
+/* Modal Inner Section Styles */
+.cs-glass-modal .cs-section {
+  background: rgba(255, 255, 255, 0.65);
+  border: 1px solid rgba(226, 232, 240, 0.8);
+  border-radius: 12px;
+  padding: 16px 18px;
+}
+
+.cs-glass-modal .cs-challenge {
+  background: rgba(255, 247, 242, 0.7);
+  border-color: rgba(241, 100, 43, 0.25);
+  border-left: 3px solid var(--brand-orange);
 }
 
 .cs-consulted .cs-label {
@@ -938,43 +947,47 @@ p {
   color: var(--brand-orange);
 }
 
-/* Glassmorphism Hover Card Trigger Button */
+/* Clean Sleek Typography Action (No Box / No Border) */
 .btn-open-cs-modal {
   display: inline-flex;
   align-items: center;
-  justify-content: space-between;
-  width: 100%;
-  padding: 11px 18px;
-  border-radius: 10px;
-  background: rgba(41, 41, 152, 0.04);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  border: 1px solid rgba(41, 41, 152, 0.12);
-  color: var(--brand-blue);
+  gap: 8px;
+  background: transparent;
+  border: none;
+  padding: 6px 0 0 0;
+  color: var(--brand-orange);
   font-family: inherit;
-  font-size: 0.88rem;
-  font-weight: 600;
+  font-size: 0.92rem;
+  font-weight: 700;
   cursor: pointer;
-  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
   margin-top: 14px;
+  align-self: flex-start;
+  transition: color 0.22s ease;
+  outline: none;
+  box-shadow: none;
+  text-decoration: none;
+}
+
+.btn-open-cs-modal .cs-link-arrow,
+.btn-open-cs-modal .modal-arrow {
+  display: inline-block;
+  font-size: 1.05rem;
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .case-study-card:hover .btn-open-cs-modal,
 .btn-open-cs-modal:hover {
-  background: linear-gradient(135deg, rgba(241, 100, 43, 0.96), rgba(225, 80, 20, 0.96));
-  color: #ffffff;
-  border-color: rgba(241, 100, 43, 0.5);
-  box-shadow: 0 6px 20px rgba(241, 100, 43, 0.3);
-  transform: translateY(-2px);
+  background: transparent;
+  color: var(--brand-blue);
+  box-shadow: none;
+  transform: none;
 }
 
-.btn-open-cs-modal .modal-arrow {
-  transition: transform 0.25s ease;
-}
-
+.case-study-card:hover .btn-open-cs-modal .cs-link-arrow,
 .case-study-card:hover .btn-open-cs-modal .modal-arrow,
+.btn-open-cs-modal:hover .cs-link-arrow,
 .btn-open-cs-modal:hover .modal-arrow {
-  transform: translateX(4px);
+  transform: translateX(5px);
 }
 
 /* ==========================================================================
