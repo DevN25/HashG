@@ -1096,7 +1096,7 @@ p {
   display: flex;
   align-items: center;
   gap: 14px;
-  flex-wrap: wrap;
+  min-width: 0;
 }
 
 .cs-modal-title {
@@ -1104,6 +1104,13 @@ p {
   font-weight: 700;
   color: var(--brand-blue);
   margin: 0;
+}
+
+.cs-modal-header-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
 }
 
 .cs-glass-modal .engagement-badge {
