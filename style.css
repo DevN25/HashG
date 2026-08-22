@@ -921,22 +921,22 @@ p {
   margin-bottom: 6px;
 }
 
-/* Modal Inner Section Styles - Frosted Glass Tiles */
+/* Modal Inner Section Styles - High-Translucency Frosted Glass Tiles */
 .cs-glass-modal .cs-section {
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.68) 0%, rgba(255, 255, 255, 0.42) 100%);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.40) 0%, rgba(255, 255, 255, 0.18) 100%);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(255, 255, 255, 0.85);
-  box-shadow: 0 8px 24px rgba(41, 41, 152, 0.04), inset 0 1px 0 rgba(255, 255, 255, 0.95);
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04), inset 0 1px 0 rgba(255, 255, 255, 0.8);
   border-radius: 16px;
   padding: 16px 18px;
 }
 
 .cs-glass-modal .cs-challenge {
-  background: linear-gradient(135deg, rgba(255, 246, 240, 0.75) 0%, rgba(255, 255, 255, 0.52) 100%);
-  border: 1px solid rgba(241, 100, 43, 0.22);
+  background: linear-gradient(135deg, rgba(255, 242, 232, 0.48) 0%, rgba(255, 255, 255, 0.20) 100%);
+  border: 1px solid rgba(241, 100, 43, 0.28);
   border-left: 4px solid var(--brand-orange);
-  box-shadow: 0 8px 24px rgba(241, 100, 43, 0.06), inset 0 1px 0 rgba(255, 255, 255, 0.95);
+  box-shadow: 0 8px 24px rgba(241, 100, 43, 0.06), inset 0 1px 0 rgba(255, 255, 255, 0.8);
 }
 
 .cs-consulted .cs-label {
@@ -944,7 +944,7 @@ p {
 }
 
 .cs-delivered .cs-label {
-  color: #2b7a4b;
+  color: #1f683e;
 }
 
 .cs-impact .cs-label {
@@ -995,15 +995,15 @@ p {
 }
 
 /* ==========================================================================
-   GLASSMORPHISM POP-UP MODAL (TRUE FROSTED GLASS)
+   GLASSMORPHISM POP-UP MODAL (DEEP CRYSTAL TRANSLUCENCY)
    ========================================================================== */
 .cs-modal-backdrop {
   position: fixed;
   inset: 0;
   z-index: 9999;
-  background: rgba(10, 16, 32, 0.48);
-  backdrop-filter: blur(18px) brightness(0.92);
-  -webkit-backdrop-filter: blur(18px) brightness(0.92);
+  background: rgba(10, 16, 32, 0.52);
+  backdrop-filter: blur(14px) brightness(0.9);
+  -webkit-backdrop-filter: blur(14px) brightness(0.9);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1026,11 +1026,11 @@ p {
   max-width: 960px;
   max-height: 84vh;
   overflow-y: auto;
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.82) 0%, rgba(255, 255, 255, 0.64) 100%);
-  backdrop-filter: blur(36px) saturate(200%);
-  -webkit-backdrop-filter: blur(36px) saturate(200%);
-  border: 1px solid rgba(255, 255, 255, 0.85);
-  box-shadow: 0 32px 80px -15px rgba(10, 20, 50, 0.3), inset 0 1px 1px 0 rgba(255, 255, 255, 0.95), inset 0 -1px 2px 0 rgba(0, 0, 0, 0.04);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.48) 0%, rgba(255, 255, 255, 0.25) 100%);
+  backdrop-filter: blur(32px) saturate(220%);
+  -webkit-backdrop-filter: blur(32px) saturate(220%);
+  border: 1px solid rgba(255, 255, 255, 0.65);
+  box-shadow: 0 32px 80px -15px rgba(0, 0, 0, 0.4), inset 0 1px 1px 0 rgba(255, 255, 255, 0.85), inset 0 -1px 2px 0 rgba(255, 255, 255, 0.2);
   border-radius: 22px;
   padding: 22px 28px;
   transform: scale(0.94) translateY(12px);
@@ -1049,7 +1049,7 @@ p {
   align-items: center;
   justify-content: space-between;
   gap: 16px;
-  border-bottom: 1px solid rgba(41, 41, 152, 0.08);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.4);
   padding-bottom: 12px;
 }
 
@@ -1068,9 +1068,9 @@ p {
 }
 
 .btn-close-cs-modal {
-  background: rgba(255, 255, 255, 0.65);
-  border: 1px solid rgba(255, 255, 255, 0.9);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  background: rgba(255, 255, 255, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.65);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   width: 34px;
@@ -1080,13 +1080,13 @@ p {
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  color: var(--text-muted);
+  color: var(--text-dark);
   transition: all 0.2s ease;
   flex-shrink: 0;
 }
 
 .btn-close-cs-modal:hover {
-  background: rgba(241, 100, 43, 0.15);
+  background: rgba(241, 100, 43, 0.2);
   color: var(--brand-orange);
   border-color: var(--brand-orange);
   transform: rotate(90deg);
@@ -1127,14 +1127,15 @@ p {
   align-items: center;
   justify-content: space-between;
   padding-top: 12px;
-  border-top: 1px solid rgba(41, 41, 152, 0.08);
+  border-top: 1px solid rgba(255, 255, 255, 0.4);
   gap: 12px;
   flex-wrap: wrap;
 }
 
 .cs-modal-footer-note {
   font-size: 0.8rem;
-  color: var(--text-muted);
+  color: var(--text-dark);
+  font-weight: 500;
 }
 
 .cs-modal-cta {
