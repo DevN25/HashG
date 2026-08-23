@@ -506,6 +506,20 @@ p {
 }
 
 @media (max-width: 899px) {
+  .hero-section {
+    padding: 24px 0 36px 0;
+  }
+
+  .hero-split-container {
+    gap: 18px;
+  }
+
+  .hero-clean-img {
+    max-width: 220px;
+    max-height: 250px;
+    margin: 0 auto;
+  }
+
   .hero-text-col {
     text-align: center;
   }
@@ -521,6 +535,18 @@ p {
 
   .hero-quick-specs {
     justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-clean-img {
+    max-width: 190px;
+    max-height: 220px;
+  }
+
+  .hero-headline {
+    font-size: 1.65rem;
+    line-height: 1.18;
   }
 }
 
