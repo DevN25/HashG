@@ -515,8 +515,8 @@ p {
   }
 
   .hero-clean-img {
-    max-width: 220px;
-    max-height: 250px;
+    max-width: 280px;
+    max-height: 320px;
     margin: 0 auto;
   }
 
@@ -540,12 +540,12 @@ p {
 
 @media (max-width: 480px) {
   .hero-clean-img {
-    max-width: 190px;
-    max-height: 220px;
+    max-width: 245px;
+    max-height: 280px;
   }
 
   .hero-headline {
-    font-size: 1.65rem;
+    font-size: 1.7rem;
     line-height: 1.18;
   }
 }
