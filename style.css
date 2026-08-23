@@ -760,16 +760,15 @@ p {
 .service-column {
   border-radius: var(--radius-lg);
   padding: 24px;
+  border: none;
 }
 
 .service-column:first-child {
   background-color: var(--brand-orange-tint);
-  border: 1px solid rgba(255, 102, 34, 0.12);
 }
 
 .service-column:last-child {
   background-color: var(--brand-blue-tint);
-  border: 1px solid rgba(41, 41, 152, 0.12);
 }
 
 .column-header {
