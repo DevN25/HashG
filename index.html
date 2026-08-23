@@ -48,6 +48,8 @@
           <img src="./vionetra-logo.png" alt="Vionetra Logo" class="vionetra-brand-img" />
         </a>
       </div>
+
+      <!-- Desktop Nav -->
       <nav class="nav-links desktop-only">
         <a href="#about">About</a>
         <a href="#services">Services</a>
@@ -55,8 +57,47 @@
         <a href="#ai-videos">AI Commercials</a>
         <a href="#why-us">Why Us</a>
       </nav>
-      <div class="header-cta">
+
+      <div class="header-cta desktop-only">
         <a href="#contact" class="btn btn-sm btn-pill btn-orange">Let's Connect</a>
+      </div>
+
+      <!-- Mobile Hamburger Toggle Button -->
+      <button class="hamburger-btn mobile-only" id="hamburgerBtn" aria-label="Toggle Navigation Menu" aria-expanded="false">
+        <span class="hamburger-bar"></span>
+        <span class="hamburger-bar"></span>
+        <span class="hamburger-bar"></span>
+      </button>
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div class="mobile-nav-drawer" id="mobileNavDrawer">
+      <div class="mobile-nav-inner">
+        <nav class="mobile-nav-links">
+          <a href="#about" class="mobile-nav-item">
+            <span>About</span>
+            <span class="mobile-nav-arrow">→</span>
+          </a>
+          <a href="#services" class="mobile-nav-item">
+            <span>Services</span>
+            <span class="mobile-nav-arrow">→</span>
+          </a>
+          <a href="#work" class="mobile-nav-item">
+            <span>Case Studies</span>
+            <span class="mobile-nav-arrow">→</span>
+          </a>
+          <a href="#ai-videos" class="mobile-nav-item">
+            <span>AI Commercials</span>
+            <span class="mobile-nav-arrow">→</span>
+          </a>
+          <a href="#why-us" class="mobile-nav-item">
+            <span>Why Us</span>
+            <span class="mobile-nav-arrow">→</span>
+          </a>
+        </nav>
+        <div class="mobile-nav-cta">
+          <a href="#contact" class="btn btn-pill btn-orange btn-block">Let's Connect →</a>
+        </div>
       </div>
     </div>
   </header>

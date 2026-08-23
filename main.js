@@ -5,6 +5,7 @@ function initApp() {
   initBannerSlot();
   initVideoPlayers();
   initCaseStudyModals();
+  initMobileMenu();
 }
 
 if (document.readyState === 'loading') {
@@ -279,4 +280,60 @@ function initVideoPlayers() {
       });
     }
   }, 200);
+}
+
+/**
+ * Handle Mobile Hamburger Navigation Menu Toggle & Interactions
+ */
+function initMobileMenu() {
+  const hamburgerBtn = document.getElementById('hamburgerBtn');
+  const mobileNavDrawer = document.getElementById('mobileNavDrawer');
+  if (!hamburgerBtn || !mobileNavDrawer) return;
+
+  function toggleMenu() {
+    const isOpen = mobileNavDrawer.classList.contains('is-open');
+    if (isOpen) {
+      closeMenu();
+    } else {
+      openMenu();
+    }
+  }
+
+  function openMenu() {
+    mobileNavDrawer.classList.add('is-open');
+    hamburgerBtn.classList.add('is-active');
+    hamburgerBtn.setAttribute('aria-expanded', 'true');
+  }
+
+  function closeMenu() {
+    mobileNavDrawer.classList.remove('is-open');
+    hamburgerBtn.classList.remove('is-active');
+    hamburgerBtn.setAttribute('aria-expanded', 'false');
+  }
+
+  hamburgerBtn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    toggleMenu();
+  });
+
+  // Close when clicking any nav link inside mobile drawer
+  mobileNavDrawer.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      closeMenu();
+    });
+  });
+
+  // Close when clicking outside header
+  document.addEventListener('click', (e) => {
+    if (!e.target.closest('.site-header')) {
+      closeMenu();
+    }
+  });
+
+  // Close on Esc key
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      closeMenu();
+    }
+  });
 }
