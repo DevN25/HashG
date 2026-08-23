@@ -792,12 +792,15 @@ p {
 .brand-name {
   font-size: 1.4rem;
   font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.01em;
 }
 
 .column-subtitle {
   font-size: 0.85rem;
   color: var(--text-sub);
   font-weight: 500;
+  line-height: 1.25;
 }
 
 .services-list {
@@ -1335,6 +1338,16 @@ p {
 }
 
 @media (max-width: 768px) {
+  .brand-name {
+    font-size: 1.25rem;
+    line-height: 1.15;
+  }
+
+  .column-subtitle {
+    font-size: 0.8rem;
+    line-height: 1.2;
+  }
+
   .logo-name {
     font-size: 1.05rem;
     line-height: 1.2;
